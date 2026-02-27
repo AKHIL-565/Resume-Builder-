@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import Steps from './components/Steps';
 import Templates from './components/Templates';
 import Features from './components/Features';
-import Pricing from './components/Pricing';
+// import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 import Background from './components/Background';
 
@@ -28,7 +28,7 @@ function App() {
                         <Steps />
                         <Templates />
                         <Features />
-                        <Pricing />
+                        {/* <Pricing /> */}
                         <Footer />
                     </div>
                 </div>
