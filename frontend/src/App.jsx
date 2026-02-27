@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Login from './Login';
 import Signup from './Signup';
@@ -28,13 +28,12 @@ function Home() {
                                 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Templates</a>
                                 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Features</a>
                                 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Showcase</a>
-                                <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Pricing</a>
                             </nav>
                             <div className="flex items-center gap-4">
                                 <Link to="/login" className="hidden sm:block text-sm font-bold px-6 py-2 hover:text-primary transition-colors">Login</Link>
-                                <button className="bg-primary text-background-dark text-sm font-bold px-6 py-2.5 rounded-full shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                                <Link to="/signup" className="bg-primary text-background-dark text-sm font-bold px-6 py-2.5 rounded-full shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
                                     Start Building
-                                </button>
+                                </Link>
                             </div>
                         </header>
 
@@ -119,7 +118,7 @@ function Home() {
                                         View all 30+ templates <span className="material-symbols-outlined">chevron_right</span>
                                     </button>
                                 </div>
-                                <div className="flex gap-8 overflow-x-auto pb-8 snap-x no-scrollbar">
+                                <div className="flex gap-8 overflow-x-auto pb-8 snap-x">
                                     <div className="min-w-[320px] snap-center group relative cursor-pointer">
                                         <div className="relative rounded-xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-500 border border-slate-200 dark:border-slate-800">
                                             <img className="w-full h-auto" alt="Modern minimalist resume template design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDicvOjZOrXTpNj5btgx2S7hVm3h3_G_jieZVbAccd9uyAINkxvq2IK-laD6Lf_C1LTM0fnRmpf7I78_Ky6Ua0GcvJy-4UNcisUyc-3ZMgRmprRJhWtEICfHYNdtLxljUh_wIF1xVpq1AjcIBoE_qbc8KorNt3QBycakyut07zXns9fNiNOs4LjqqvxT0D3V8q2x06coKJ8NdKlYvA9Bi53gDRyD84gri28fLgQcry3qkKXUYPEbS65xQXJEFq9OePN5mf0Aixtmoo" />
@@ -130,11 +129,11 @@ function Home() {
                                         <p className="mt-4 font-bold text-navy dark:text-white">The Executive</p>
                                         <p className="text-sm text-slate-500">Minimalist & Clean</p>
                                     </div>
-                                    {/* ... rest of templates ... */}
                                 </div>
                             </div>
                         </section>
 
+                        {/* CTA Footer */}
                         <footer className="py-20 px-6 lg:px-20 text-center">
                             <div className="max-w-3xl mx-auto flex flex-col items-center">
                                 <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-8 border border-primary/30">
@@ -144,6 +143,14 @@ function Home() {
                                 <Link to="/signup" className="bg-primary text-background-dark px-12 py-6 rounded-full text-xl font-black uppercase tracking-tight shadow-xl shadow-primary/30 hover:scale-110 transition-transform">
                                     Create Your Resume Now
                                 </Link>
+                            </div>
+                            <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-500 font-medium">
+                                <p>© 2024 Abstract Geometry CV Builder. All rights reserved.</p>
+                                <div className="flex gap-8">
+                                    <a className="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                                    <a className="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                                    <a className="hover:text-primary transition-colors" href="#">Contact Us</a>
+                                </div>
                             </div>
                         </footer>
                     </div>

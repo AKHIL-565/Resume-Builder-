@@ -18,10 +18,15 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/resume', resumeRoutes);
 
+// Basic route
+app.get('/', (req, res) => {
+    res.send('Resume Builder API is running...');
+});
+
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/resume-builder')
     .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('MongoDB connection error:', err));
+    .catch(err => console.error('Could not connect to MongoDB', err));
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
