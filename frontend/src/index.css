@@ -20,3 +20,9 @@
   filter: blur(40px);
   opacity: 0.4;
 }
+
+.kinetic-shape {
+  filter: blur(2px);
+  transition: transform 0.2s ease-out;
+  pointer-events: none;
+}
