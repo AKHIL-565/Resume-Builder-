@@ -9,13 +9,6 @@ import Footer from './components/Footer';
 import Background from './components/Background';
 
 function App() {
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        // Fetch initial data if needed
-        // fetch('http://localhost:5000/api/resume').then(...)
-    }, []);
-
     return (
         <div className="dark">
             <div className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300 min-h-screen">
@@ -33,7 +26,7 @@ function App() {
                     </div>
                 </div>
             </div>
-        </div>
+        </Router>
     );
 }
 
